@@ -60,6 +60,8 @@ Remotion project：由 `script.json` + `public/vo.mp3` + `public/vo-timing.json`
 
 ## 指令
 - VO：`npm run tts`（A/B：`npm run tts -- --voices ID1,ID2 --models eleven_v3,eleven_multilingual_v2`）
+  - 每次行都會扣 ElevenLabs credits；VO 稿未 approve 唔好行。
+  - `meta.languageCode: "yue"` 只對 `eleven_v3` 有效；其他 model 拒收時 script 會自動唔帶 language_code 重試並出 warning。
 - Preview：`npx remotion studio`
 - Render：`npx remotion render Main-9x16 out/<slug>-9x16.mp4`、`npx remotion render Main-16x9 out/<slug>-16x9.mp4`
 - 抽 frame 檢查：`npx remotion still Main-9x16 out/check/<slug>-<frame>.png --frame=<n>`

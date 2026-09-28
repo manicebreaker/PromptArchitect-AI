@@ -5,7 +5,7 @@
 2. 將呢個 kit 全部內容 copy 入 project root（包括隱藏嘅 `.claude/` folder）
 3. `cd icebreaker-video && npm i -D tsx`
 4. `package.json` 嘅 `scripts` 加一行：`"tts": "tsx --env-file=.env scripts/tts.ts"`
-5. 建立 `.env`：`ELEVENLABS_API_KEY=你嘅key`（記得加入 `.gitignore`）
+5. `cp .env.example .env`，填 `ELEVENLABS_API_KEY`（kit 附帶嘅 `.gitignore` 已包 `.env`；如果 Remotion template 已有 `.gitignore`，合併兩份，唔好直接覆蓋）
 6. Logo 放 `public/logo.svg`，填好 `CLAUDE.md` 入面所有 `[...]` placeholder
 7. 裝 Remotion plugin：
    ```
@@ -18,7 +18,9 @@
 2. 喺 ElevenLabs Voice Library 揀 2–3 把 native 廣東話聲，copy voice ID
 3. `npm run tts -- --voices ID1,ID2,ID3 --models eleven_v3,eleven_multilingual_v2`
 4. 聽 `public/vo-tests/` 入面嘅檔案，揀最好嗰個組合，填入 `script.json` 嘅 `meta.voiceId` / `modelId`
-5. `npm run tts` → 確認 `public/vo-timing.json` 冇 alignment warning
+5. `npm run tts` → 確認 terminal 冇「對唔上」warning（「少量差異」warning 可接受，但要抽查字幕）
+
+> 廣東話：`eleven_v3` + `languageCode: "yue"` 係官方支援組合；`eleven_multilingual_v2` 冇 Cantonese language code，要靠 voice 本身，A/B 時留意有冇普通話腔。
 
 ## 砌 scene library（Claude Code，一次性）
 開 `claude`，貼：

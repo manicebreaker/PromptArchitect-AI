@@ -4,7 +4,8 @@
     "slug": "ga4-conversion-mismatch",
     "series": "1分鐘 GA4",
     "voiceId": "[VOICE_ID]",
-    "modelId": "eleven_multilingual_v2",
+    "modelId": "eleven_v3",
+    "languageCode": "yue",
     "tailSec": 0.8
   },
   "scenes": [
