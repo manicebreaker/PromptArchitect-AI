@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "GA4 Conversion 對唔到數？3個常見設定錯誤",
+    "slug": "ga4-conversion-mismatch",
+    "series": "1分鐘 GA4",
+    "voiceId": "[VOICE_ID]",
+    "modelId": "eleven_multilingual_v2",
+    "tailSec": 0.8
+  },
+  "scenes": [
+    {
+      "type": "hook",
+      "vo": "GA4 同 Google Ads 嘅 conversion 對唔到數？好多時係呢三個位出事。",
+      "data": { "headline": "Conversion 對唔到數？", "sub": "3個常見設定錯誤" }
+    },
+    {
+      "type": "steps",
+      "vo": "第一，重複計數。如果 Google Ads 同時用緊 GA4 import 同 Ads tag 做主要 conversion，一單會計兩次。",
+      "data": { "step": 1, "total": 3, "title": "重複計數", "detail": "主要 conversion 只揀一個 source" }
+    },
+    {
+      "type": "steps",
+      "vo": "第二，計數日期唔同。Google Ads 將 conversion 計返落 click 嗰日，GA4 就計喺轉換發生嗰日。",
+      "data": { "step": 2, "total": 3, "title": "計數日期唔同", "detail": "比較數字前先對齊日期基準" }
+    },
+    {
+      "type": "steps",
+      "vo": "第三，tag 裝咗兩次。GTM 同網站 code 都有 GA4 tag，event 就會雙倍。",
+      "data": { "step": 3, "total": 3, "title": "Tag 重複 fire", "detail": "用 Tag Assistant 檢查有冇雙重 hit" }
+    },
+    {
+      "type": "cta",
+      "vo": "想我哋幫你 audit tracking？WhatsApp 搵 Icebreaker。",
+      "data": { "headline": "Tracking 唔準，廣告點優化？", "action": "WhatsApp 搵 Icebreaker" }
+    }
+  ]
+}
